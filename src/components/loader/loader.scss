@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+@import '../../styles/typography/typography-utils';
+
+// loader
+#data-loading {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  z-index: 2000;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-content {
+  background: $secondary-bg;
+  box-shadow: $shadow-header;
+  border-radius: $border-radius-md;
+  border: 1px solid $divider-color;
+  padding: $spacer 60px $spacer $spacer;
+  display: inline-block;
+  white-space: nowrap;
+  color: $text-primary;
+
+  img {
+    float: left;
+  }
+
+  .loading-text {
+    float: left;
+    padding-left: 15px;
+    @include typography-level-to-styles(typography-config(), body-1);
+    div:last-child {
+      margin-top: $spacer / 8;
+      color: $text-primary;
+    }
+  }
+}

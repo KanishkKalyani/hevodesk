@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.layout {
+  display: grid;
+  grid-template-rows: 86px 1fr;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    'navbar topbar'
+    'navbar childern';
+
+  .navbar {
+    grid-area: navbar;
+
+    .navbar-logo {
+      width: 114px;
+    }
+
+    .navbar-option {
+      width: 100%;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: $border-radius-md;
+      }
+    }
+  }
+
+  .topbar {
+    grid-area: topbar;
+  }
+
+  .children-container {
+    grid-area: childern;
+    overflow: auto;
+  }
+
+  .navbar-logo {
+    margin: $spacer * 1.875 auto;
+  }
+}
+
+.user-details {
+  margin-top: auto;
+}

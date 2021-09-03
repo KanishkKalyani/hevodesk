@@ -1,0 +1,14 @@
+.forms-display-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  grid-template-areas: 'addForm addFormsList';
+
+  .add-form {
+    grid-area: addForm;
+  }
+
+  .add-forms-list {
+    grid-area: addFormsList;
+  }
+}

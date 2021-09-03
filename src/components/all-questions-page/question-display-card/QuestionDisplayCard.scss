@@ -1,0 +1,21 @@
+@import '../../../styles/variables';
+
+.question-display-card {
+  min-height: 85px;
+}
+
+.question-description {
+  max-width: 70%;
+}
+
+.question-status-wrapper {
+  width: 26%;
+}
+
+.badge-light {
+  color: $default-secondary;
+}
+
+.badge-light.success-badge {
+  color: $success;
+}
