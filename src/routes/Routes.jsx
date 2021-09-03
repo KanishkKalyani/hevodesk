@@ -47,6 +47,11 @@ const Routes = () => {
         />
         <PrivateRoute path='/forms' exact component={FormPage} />
         <PrivateRoute
+          path='/employee-queries'
+          exact
+          component={AllQuestionsPage}
+        />
+        <PrivateRoute
           path='/control-panel'
           exact
           component={ControlPanelPage}

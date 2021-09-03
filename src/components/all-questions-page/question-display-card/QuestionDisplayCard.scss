@@ -2,6 +2,12 @@
 
 .question-display-card {
   min-height: 85px;
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $accent-faded;
+    transform: scale(1.001);
+  }
 }
 
 .question-description {

@@ -1,0 +1,7 @@
+@import '../../../styles/variables';
+
+.time {
+  position: absolute;
+  top: $spacer * 0.25;
+  right: $spacer * 0.5;
+}

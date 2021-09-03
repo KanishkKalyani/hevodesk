@@ -1,7 +1,6 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import jwt from 'jsonwebtoken';
-import { trackPromise } from 'react-promise-tracker';
 
 class ActivateAccount extends React.Component {
   constructor(props) {
@@ -32,26 +31,6 @@ class ActivateAccount extends React.Component {
     this.setState({
       buttonText: `Activating Account...`,
     });
-
-    trackPromise(
-      // axios
-      //   .post(`/account-activation`, {
-      //     token: this.state.token,
-      //   })
-      //   .then((res) => {
-      //     toast.success(res.data.message);
-      //     this.props.history.push('/sign-in');
-      //   })
-      //   .catch((err) => {
-      //     if (err && err.response && err.response.data) {
-      //       toast.error(err.response.data.error);
-      //     } else {
-      //       toast.error(`Problem Connecting to Database`);
-      //     }
-      //     this.props.history.push('/register');
-      //   }),
-      'activate-account'
-    );
   };
 
   render() {

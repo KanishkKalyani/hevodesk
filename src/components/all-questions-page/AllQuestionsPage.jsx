@@ -93,6 +93,7 @@ const AllQuestionsPage = ({ history }) => {
             {questions.map((questionData, index) => (
               <QuestionDisplayCard
                 key={questionData.id}
+                history={history}
                 questionData={questionData}
                 names={names}
                 className={`${index % 2 !== 0 && 'bg-surface-navbar'}`}

@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { trackPromise } from 'react-promise-tracker';
 import { Link } from 'react-router-dom';
 import HdTextField from '../text-field/TextField';
 import { TextField } from '@material-ui/core';
 import HevoDeskLogo from '../hevodesk-logo/HevoDeskLogo';
 import './Login.scss';
-import axios from 'axios';
 import { apiCall } from '../../utils/apiService';
 import { authenticate, isAuth } from '../../utils/helpers';
 import { LoaderContext } from '../context/LoaderContext';

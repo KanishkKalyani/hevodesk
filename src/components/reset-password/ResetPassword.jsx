@@ -1,7 +1,6 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 import jwt from 'jsonwebtoken';
-import { trackPromise } from 'react-promise-tracker';
 
 class ResetPassword extends React.Component {
   constructor(props) {
@@ -44,36 +43,6 @@ class ResetPassword extends React.Component {
         ...this.state,
         submitButton: `Resetting Password...`,
       });
-
-      trackPromise(
-        // axios
-        //   .post(`/reset-password`, {
-        //     resetPasswordLink: token,
-        //     newPassword: password,
-        //   })
-        //   .then((res) => {
-        //     toast.success(res.data.message);
-        //     this.setState({
-        //       password: '',
-        //       confirmPassword: '',
-        //       submitButton: `Reset Password`,
-        //     });
-        //     this.props.history.push('/sign-in');
-        //   })
-        //   .catch((err) => {
-        //     if (err && err.response && err.response.data) {
-        //       toast.error(err.response.data.error);
-        //     } else {
-        //       toast.error(`Problem Connecting to Database`);
-        //     }
-
-        //     this.setState({
-        //       ...this.state,
-        //       submitButton: `Reset Password`,
-        //     });
-        //   }),
-        'reset-password'
-      );
     } else {
       if (password === '') {
         toast.warn(`Password cannot be blank`);

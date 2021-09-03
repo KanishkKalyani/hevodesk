@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { trackPromise } from 'react-promise-tracker';
 import HdTextField from '../text-field/TextField';
 import HevoDeskLogo from '../hevodesk-logo/HevoDeskLogo';
 

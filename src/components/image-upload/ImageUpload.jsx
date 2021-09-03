@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { trackPromise } from 'react-promise-tracker';
 import { toast } from 'react-toastify';
 import Layout from '../layout/Layout';
 import Image from './Image';
@@ -28,46 +27,11 @@ class ImageUpload extends Component {
           'content-type': 'multipart/form-data',
         },
       };
-
-      trackPromise(
-        // axios
-        //   .post(`/v1/files/image-upload/${userId}`, data, config)
-        //   .then((res) => {
-        //     toast.success(`Image Upload Success`);
-        //     this.props.history.push('/');
-        //   })
-        //   .catch((err) => {
-        //     if (err && err.response && err.response.data) {
-        //       toast.error(err.response.data.error);
-        //     } else {
-        //       toast.error(`Image Upload Failed`);
-        //     }
-        //   }),
-        'image-upload'
-      );
     }
   };
 
   deleteImage = (e) => {
     const userId = isAuth()._id;
-
-    trackPromise(
-      // axios
-      //   .delete(`/v1/files/delete-image/${userId}`)
-      //   .then((res) => {
-      //     toast.success(`Image Deleted Successfully`);
-      //     this.setState({ fileUpload: undefined });
-      //     this.props.history.push('/');
-      //   })
-      //   .catch((err) => {
-      //     if (err && err.response && err.response.data) {
-      //       toast.error(err.response.data.error);
-      //     } else {
-      //       toast.error(`Image Deletion Failed`);
-      //     }
-      //   }),
-      'image-delete'
-    );
   };
 
   render() {

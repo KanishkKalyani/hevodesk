@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { isAuth } from '../../utils/helpers';
 
 class Image extends React.Component {
@@ -18,26 +17,26 @@ class Image extends React.Component {
   }
 
   componentDidMount() {
-    axios
-      .get(`/v1/files/profile-image/${isAuth()._id}`)
-      .then((resp) => {
-        if (resp) {
-          var base64Flag = 'data:image/jpeg;base64,';
-          var imageStr = this.arrayBufferToBase64(
-            resp.data.image[0].img.data.data
-          );
-          this.setState({
-            img: base64Flag + imageStr,
-          });
-        } else {
-          this.setState({
-            img: '',
-          });
-        }
-      })
-      .catch((err) => {
-        console.error(`ERROR in fetching profile picture`, err);
-      });
+    // axios
+    //   .get(`/v1/files/profile-image/${isAuth()._id}`)
+    //   .then((resp) => {
+    //     if (resp) {
+    //       var base64Flag = 'data:image/jpeg;base64,';
+    //       var imageStr = this.arrayBufferToBase64(
+    //         resp.data.image[0].img.data.data
+    //       );
+    //       this.setState({
+    //         img: base64Flag + imageStr,
+    //       });
+    //     } else {
+    //       this.setState({
+    //         img: '',
+    //       });
+    //     }
+    //   })
+    //   .catch((err) => {
+    //     console.error(`ERROR in fetching profile picture`, err);
+    //   });
   }
 
   render() {

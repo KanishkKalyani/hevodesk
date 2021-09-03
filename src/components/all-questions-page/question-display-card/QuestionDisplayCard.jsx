@@ -27,9 +27,11 @@ const QuestionDisplayCard = ({ questionData, className, history, names }) => {
 
   return (
     <div
-      className={`question-display-card px-5 py-4 center-flex-row justify-between ${className}`}
+      className={`question-display-card px-5 py-4 center-flex-row justify-between  ${className}`}
     >
-      <div className='question-description'>{description}</div>
+      <div className='question-description' onClick={openQuestion}>
+        {description}
+      </div>
       <div className='question-status-wrapper center-flex-row justify-end'>
         {assignee ? (
           <div>{assignee}</div>
@@ -38,6 +40,7 @@ const QuestionDisplayCard = ({ questionData, className, history, names }) => {
             value={assignedPerson}
             options={testAssignees}
             handleChange={(e) => {
+              e.stopPropagation();
               setAssignedPerson(e.target.value);
             }}
             name='assignee'

@@ -6,9 +6,9 @@ import './loader.scss';
 function Loader({ msg }) {
   return (
     <div id='data-loading'>
-      <div class='loading-content clearfix'>
+      <div className='loading-content clearfix'>
         <img src={loader} alt='loader' />
-        <div class='loading-text'>
+        <div className='loading-text'>
           <div>
             <b>LOADING YOUR DATA</b>
           </div>
