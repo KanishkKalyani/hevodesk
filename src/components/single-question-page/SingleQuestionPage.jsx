@@ -87,6 +87,7 @@ const SingleQuestionPage = ({ match, history }) => {
     setShowLoader(true);
     apiCall.post(`/app/threads/${replyInfo.id}`, body).then((resp) => {
       setShowLoader(false);
+      getConversation();
       setFormData({
         question: '',
         submitButton: 'Send',

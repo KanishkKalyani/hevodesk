@@ -10,8 +10,8 @@ const ThreadDisplayCard = ({
 }) => {
   return (
     <div className='border-top position-relative p-5'>
-      <div>{from.firstName}</div>
-      <div className='mt-2'>{from.email}</div>
+      <div className='text-medium'>{from.firstName}</div>
+      <div className='mt-1 text-secondary'>{from.email}</div>
       <div className='mt-5'>{description}</div>
       <div className='time text-caption-1 text-secondary'>{time}</div>
       <button
